@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WifiStats.Program" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WifiStats.Scan">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAQAgAA=</HashCode>
+      <FileName>Scan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Reseau" />
+      <Property Name="Network" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WifiStats.Reseau">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reseau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WifiStats.Machine">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAADAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Machine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WifiStats.DataPersistance">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAgAIAAAAAAAAAAAA=</HashCode>
+      <FileName>DataPersistance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WifiStats.ScanManager">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAgAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScanManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DataPersistance" />
+      <Property Name="DiagramBuilder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WifiStats.DiagramBuilder">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiagramBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WifiStats.ConsoleView">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ScanManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WifiStats.Network">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="WifiStats.TypeMachine">
+    <Position X="9.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>TypeMachine.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WifiStats.EtatScan">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAACAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EtatScan.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
