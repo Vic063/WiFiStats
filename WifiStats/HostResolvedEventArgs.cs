@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace WifiStats
 {
-    public class PingFinishedEventArgs : EventArgs
+    public class HostResolvedEventArgs : EventArgs
     {
 
         private List<Machine> listMachines;
@@ -15,11 +16,10 @@ namespace WifiStats
             get { return listMachines; }
         }
 
-        public PingFinishedEventArgs(List<Machine> listMachines)
+        public HostResolvedEventArgs(List<Machine> listMachines)
         {
             // TODO: Complete member initialization
             this.listMachines = listMachines;
         }
-
     }
 }

@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net;
 
 namespace WifiStats
 {
     public class Machine
     {
+        private IPAddress ip;
+
         public System.Net.IPAddress IP
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.ip;
             }
+
             set
             {
+                this.ip = value;
             }
         }
 
@@ -60,6 +65,12 @@ namespace WifiStats
             set
             {
             }
+        }
+
+        public string HostName
+        {
+            get;
+            set;
         }
     }
 }

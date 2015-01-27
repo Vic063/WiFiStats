@@ -51,6 +51,7 @@ namespace WifiStats
                     Console.WriteLine(String.Format("{0} I'm alive!", e.Reply.Address.ToString()));
                     break;
             }
+
             nbProcessed++;
             if (nbProcessed == 254)
             {
@@ -63,6 +64,14 @@ namespace WifiStats
             if (pingFinished != null)
             {
                 pingFinished(this, args);
+            }
+        }
+
+        public List<Machine> Machines
+        {
+            get
+            {
+                return listMachines;
             }
         }
     }

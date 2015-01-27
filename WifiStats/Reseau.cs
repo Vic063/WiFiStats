@@ -11,10 +11,11 @@ namespace WifiStats
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.IP;
             }
             set
             {
+                this.IP = value;
             }
         }
 
