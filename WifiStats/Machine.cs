@@ -9,6 +9,7 @@ namespace WifiStats
     public class Machine
     {
         private IPAddress ip;
+        private String mac;
 
         public System.Net.IPAddress IP
         {
@@ -27,10 +28,11 @@ namespace WifiStats
         {
             get
             {
-                throw new System.NotImplementedException();
+                return mac;
             }
             set
             {
+                mac = value;
             }
         }
 

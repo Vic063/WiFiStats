@@ -11,6 +11,8 @@ namespace WifiStats
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Connecté au réseau " + Environment.UserDomainName);
+
             Scan s = new Scan();
             s.startScan();
             s.HostResolved += s_HostResolved;
@@ -20,7 +22,7 @@ namespace WifiStats
 
         static void s_HostResolved(object sender, HostResolvedEventArgs e)
         {
-            Console.WriteLine("Tous les hosts on été trouvés");
+            Console.WriteLine("Tous les hosts on été trouvés.");
         }
     }
 }

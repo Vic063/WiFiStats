@@ -3,14 +3,14 @@
   <Class Name="WifiStats.Program" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WifiStats.Scan">
     <Position X="7" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAQAgAA=</HashCode>
+      <HashCode>QAAAACAEAAAAAAAAAAAAQAAAEAAAAAABgAIAAAQAgAA=</HashCode>
       <FileName>Scan.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -28,7 +28,7 @@
   <Class Name="WifiStats.Machine">
     <Position X="9.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAADAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>gCAAEDAAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAE=</HashCode>
       <FileName>Machine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -68,9 +68,16 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="WifiStats.Network">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="WifiStats.Network.SERVER_INFO_100" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Network.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQSAqAAAAAAIAEAAEAAAEAAIAAEAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Network.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -82,7 +89,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="WifiStats.EtatScan">
-    <Position X="7" Y="3.5" Width="1.5" />
+    <Position X="5.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAACAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EtatScan.cs</FileName>
