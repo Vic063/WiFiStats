@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
 
 namespace WifiStats
 {
+    [DataContract]
     public class Scan
     {
 
@@ -18,6 +20,7 @@ namespace WifiStats
         {
             this.Date = DateTime.Now;
             this.Network = new Network();
+            this.Reseau = new Reseau();
         }
 
         public void startScan()
@@ -35,6 +38,8 @@ namespace WifiStats
 
             nbHostResolved = 0;
 
+            Reseau.Machines = machines;
+
             foreach (Machine machine in machines)
             {
                 Dns.BeginGetHostEntry(machine.IP, GetHostEntryCallback, machine);
@@ -42,6 +47,7 @@ namespace WifiStats
 
         }
 
+        [DataMember]
         public DateTime Date
         {
             get;
@@ -53,7 +59,7 @@ namespace WifiStats
             get;
             private set;
         }
-
+        [DataMember]
         public Reseau Reseau
         {
             get;

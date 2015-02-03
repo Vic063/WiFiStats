@@ -1,0 +1,12 @@
+U:\lp\C#\WifiStats\WifiStats\bin\Debug\WifiStats.exe.config
+U:\lp\C#\WifiStats\WifiStats\bin\Debug\WifiStats.exe
+U:\lp\C#\WifiStats\WifiStats\bin\Debug\WifiStats.pdb
+U:\lp\C#\WifiStats\WifiStats\obj\Debug\WifiStats.csprojResolveAssemblyReference.cache
+U:\lp\C#\WifiStats\WifiStats\obj\Debug\WifiStats.exe
+U:\lp\C#\WifiStats\WifiStats\obj\Debug\WifiStats.pdb
+C:\Users\Alix\Documents\C#\wifistats\WifiStats\bin\Debug\WifiStats.exe.config
+C:\Users\Alix\Documents\C#\wifistats\WifiStats\obj\Debug\WifiStats.exe
+C:\Users\Alix\Documents\C#\wifistats\WifiStats\obj\Debug\WifiStats.pdb
+C:\Users\Alix\Documents\C#\wifistats\WifiStats\bin\Debug\WifiStats.exe
+C:\Users\Alix\Documents\C#\wifistats\WifiStats\bin\Debug\WifiStats.pdb
+C:\Users\Alix\Documents\C#\wifistats\WifiStats\obj\Debug\WifiStats.csprojResolveAssemblyReference.cache

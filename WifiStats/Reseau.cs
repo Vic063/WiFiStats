@@ -1,44 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace WifiStats
 {
+    [DataContract]
     public class Reseau
     {
+        [DataMember]
         public System.Net.IPAddress IP
         {
-            get
-            {
-                return this.IP;
-            }
-            set
-            {
-                this.IP = value;
-            }
+            get;
+            set;
         }
 
+        [DataMember]
         public string SSID
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
-
+        [DataMember]
         public List<Machine> Machines
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
     }
 }

@@ -11,11 +11,16 @@ namespace WifiStats
     {
         static void Main(string[] args)
         {
-            Scan s = new Scan();
-            s.startScan();
-            s.HostResolved += s_HostResolved;
+            ScanManager.Instance.startScan();
+
+
 
             Console.Read();
+
+            foreach (DateTime dt in DataPersistance.Instance.ListScans)
+            {
+                Console.WriteLine(dt);
+            }
         }
 
         static void s_HostResolved(object sender, HostResolvedEventArgs e)
