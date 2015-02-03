@@ -6,12 +6,16 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Runtime.Serialization;
 
 namespace WifiStats
 {
+    [DataContract]
     public class Network
     {
         private List<Machine> listMachines;
+
+        [DataMember]
         private IPAddress localAddr;
         private int nbProcessed = 0;
         public event EventHandler<PingFinishedEventArgs> pingFinished;
@@ -95,14 +99,25 @@ namespace WifiStats
             {
                 return listMachines;
             }
+
+            private set
+            {
+                listMachines = value;
+            }
         }
 
+        [DataMember]
         public IPAddress NetworkIP
         {
             get
             {
                 UInt32 ip = BitConverter.ToUInt32(localAddr.GetAddressBytes(), 0);
                 return new IPAddress(ip);
+            }
+
+            private set
+            {
+                localAddr = value;
             }
         }
 

@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
+using System.Runtime.Serialization;
 
 namespace WifiStats
 {
+    [DataContract]
     public class Machine
     {
         private IPAddress ip;
         private String mac;
 
-        public System.Net.IPAddress IP
+        [DataMember]
+        public IPAddress IP
         {
             get
             {
@@ -24,6 +27,7 @@ namespace WifiStats
             }
         }
 
+        [DataMember]
         public string MAC
         {
             get
@@ -36,39 +40,43 @@ namespace WifiStats
             }
         }
 
+        [DataMember]
         public string OS
         {
             get
             {
-                throw new System.NotImplementedException();
+                return "Inconnu";
             }
             set
             {
             }
         }
 
+        [DataMember]
         public string Constructeur
         {
             get
             {
-                throw new System.NotImplementedException();
+                return "Inconnu";
             }
             set
             {
             }
         }
 
+        [DataMember]
         public TypeMachine TypeMachine
         {
             get
             {
-                throw new System.NotImplementedException();
+                return TypeMachine.Desktop;
             }
             set
             {
             }
         }
 
+        [DataMember]
         public string HostName
         {
             get;

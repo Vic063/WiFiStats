@@ -11,7 +11,6 @@ namespace WifiStats
 {
     public class DataPersistance
     {
-
         private static DataPersistance _instance = null;
         public static DataPersistance Instance
         {
@@ -24,6 +23,10 @@ namespace WifiStats
 
                 return _instance;
             }
+        }
+
+        private DataPersistance()
+        {
         }
 
         /**
@@ -40,26 +43,37 @@ namespace WifiStats
             }
 
             using (Stream stream = File.Create("scans\\"+(long)(s.Date.ToUniversalTime().Subtract(
-                new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+                new DateTime(1, 1, 1, 0, 0, 0, DateTimeKind.Utc)
                 ).TotalMilliseconds) + ".xml"))
             {
                 ds.WriteObject(stream, s);
             }
+
+            Console.WriteLine("Sauvegarde terminée.");
         }
 
-        public void LoadScan()
+        public Scan LoadScan(String path)
         {
-            throw new System.NotImplementedException();
+            
+            DataContractSerializer ds = new DataContractSerializer(typeof(Scan));
+            Scan scan;
+
+            using (Stream s = File.OpenRead(path))
+            {
+                scan = (Scan)ds.ReadObject(s);
+            }
+
+            return scan;
         }
 
-        public List<DateTime> ListScans
+        public Dictionary<DateTime, String> ListScans
         {
             get
             {
-                List<DateTime> _listScans = new List<DateTime>();
+                Dictionary<DateTime, String> _listScans = new Dictionary<DateTime, string>();
                 foreach (string s in Directory.GetFiles("scans"))
                 {
-                    _listScans.Add(GetDateFromFileName(s));
+                    _listScans.Add(GetDateFromFileName(s), s);
                 }
                 
                 return _listScans;
@@ -73,9 +87,10 @@ namespace WifiStats
         {
             string date = s.Split('.')[0];
             //date == "scans\\1422435777594"
-            long ms = Convert.ToInt32(date);
+            string msString = date.Split('\\')[1];
+            long ms = Convert.ToInt64(msString) * 10000;
 
-            return new DateTime(ms * 10000);
+            return new DateTime(ms);
         }
 
     }

@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
 
 namespace WifiStats
 {
+    [DataContract]
     public class Scan
     {
+        [DataMember]
         private int nbHostResolved = 0;
         public event EventHandler<HostResolvedEventArgs> HostResolved;
 
@@ -17,6 +20,8 @@ namespace WifiStats
             this.Date = DateTime.Now;
             this.Network = new Network();
             this.Reseau = new Reseau();
+
+            this.Reseau.SSID = Environment.UserDomainName;
         }
 
         public void startScan()
@@ -41,24 +46,28 @@ namespace WifiStats
             }
         }
 
+        [DataMember]
         public DateTime Date
         {
             get;
             private set;
         }
 
+        [DataMember]
         public EtatScan Etat
         {
             get;
             private set;
         }
 
+        [DataMember]
         public Reseau Reseau
         {
             get;
             private set;
         }
 
+        [DataMember]
         public Network Network
         {
             get;
@@ -74,8 +83,8 @@ namespace WifiStats
             {
                 // Get the results.
                 IPHostEntry host = Dns.EndGetHostEntry(result);
-
                 m.HostName = host.HostName;
+
                 uint serverInfoResult = Network.GetServerInfo(host.HostName);
                 switch (serverInfoResult)
                 {
@@ -123,9 +132,7 @@ namespace WifiStats
         protected virtual void OnHostResolved(HostResolvedEventArgs args)
         {
             if (HostResolved != null)
-            {
                 HostResolved(this, args);
-            }
         }
     }
 }

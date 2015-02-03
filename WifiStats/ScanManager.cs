@@ -7,11 +7,11 @@ namespace WifiStats
 {
     public class ScanManager
     {
-        
+        private Scan scan;
 
         public void startScan()
         {
-            Scan scan = new Scan();
+            scan = new Scan();
 
             scan.HostResolved += s_HostResolved;
             scan.startScan();
@@ -28,7 +28,7 @@ namespace WifiStats
         private ScanManager()
         {
             this.Scans = new List<Scan>();
-            this.DataPersistance = new DataPersistance();
+            this.DataPersistance = DataPersistance.Instance;
         }
 
         private static ScanManager _instance = null ;
@@ -65,6 +65,14 @@ namespace WifiStats
             }
             set
             {
+            }
+        }
+
+        public Scan Scan
+        {
+            get
+            {
+                return this.scan;
             }
         }
     }
