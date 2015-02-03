@@ -3,49 +3,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
-using System.Runtime.Serialization;
 
 namespace WifiStats
 {
-    [DataContract]
     public class Machine
     {
-        [DataMember]
+        private IPAddress ip;
+        private String mac;
+
         public System.Net.IPAddress IP
         {
-            get;
-            set;
+            get
+            {
+                return this.ip;
+            }
+
+            set
+            {
+                this.ip = value;
+            }
         }
 
-        [DataMember]
         public string MAC
         {
-            get;
-            private set;
+            get
+            {
+                return mac;
+            }
+            set
+            {
+                mac = value;
+            }
         }
 
-        [DataMember]
         public string OS
         {
-            get;
-            private set;
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
-        [DataMember]
         public string Constructeur
         {
-            get;
-            private set;
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
-        [DataMember]
         public TypeMachine TypeMachine
         {
-            get;
-            private set;
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
-        [DataMember]
         public string HostName
         {
             get;
